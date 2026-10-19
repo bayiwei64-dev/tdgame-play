@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>村庄保卫战 · 浏览器试玩</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <div><p class="eyebrow">C++ / SDL2 · 游戏客户端实践</p><h1>村庄保卫战<span class="tag">浏览器试玩</span></h1></div>
+      <div class="toolbar"><span class="status" id="status" role="status">准备就绪</span><button id="pause" disabled>暂停</button><button id="sound" disabled aria-pressed="false">声音：开</button><button id="restart" disabled>重新开始</button></div>
+    </header>
+
+    <section class="game-shell" aria-label="村庄保卫战试玩区域">
+      <canvas id="canvas" width="1280" height="720" tabindex="0" aria-label="游戏画面，点击开始后使用 WASD 移动，J 攻击，K 技能，Q 时间停止"></canvas>
+      <div class="cover" id="cover">
+        <img class="poster" src="assets/poster.png" alt="塔防游戏实机画面，炮塔沿敌人路线布置" width="1280" height="720">
+        <div class="cover-shade"></div>
+        <div class="cover-content"><p class="eyebrow" id="cover-kicker">布置防线，也亲自加入战斗</p><h2 id="cover-title">守住村庄</h2><p id="cover-description">建造炮塔抵御敌人，按 Q 停止世界时间。<br>时间停止时，你仍能移动并攻击。</p><button class="primary" id="start">开始试玩<span aria-hidden="true"> →</span></button><p class="cover-note" id="cover-note">建议使用电脑，键盘与鼠标操作</p></div>
+      </div>
+      <div id="error" class="error" role="alert" hidden></div>
+    </section>
+
+    <section class="guide" aria-label="游戏操作">
+      <div class="key-group"><span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></span><strong>移动</strong></div>
+      <div class="key-group"><kbd>J</kbd><strong>攻击</strong></div>
+      <div class="key-group"><kbd>K</kbd><strong>能量技能</strong></div>
+      <div class="key-group"><kbd>Q</kbd><strong>时间停止</strong><span class="muted">持续 5 秒 · 冷却 10 秒</span></div>
+      <div class="mouse-guide"><strong>建塔</strong><span>在空地按住鼠标，移到塔的选项后松开。</span></div>
+    </section>
+    <footer class="footer"><p>课程实践＋个人扩展。个人扩展包括时间停止、暂停期间伤害与受击反馈修复、状态提示及重复按键处理。</p><p>源码按需授权查看：GitHub 私有仓库。<a href="assets/demo.mp4" target="_blank" rel="noopener">观看 39 秒演示 ↗</a><a href="credits.html" target="_blank" rel="noopener">来源与许可 ↗</a></p></footer>
+  </main>
+  <script src="game.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
